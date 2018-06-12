@@ -1,0 +1,945 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  &:after, &:before
+    box-sizing: border-box
+
+::placeholder
+  color: #838383
+  font-size: 12px
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 12px
+  width: 100% !important
+  min-width: 320px
+  position: relative
+  line-height: 1.4
+  font-family: $default-font
+  overflow-x: hidden
+  cursor: default
+  input, textarea
+    border: #E2E2E2 1px solid
+    @extend .trans
+    outline: none
+    &:focus:required:invalid
+      border-color: $button-color
+      @extend .trans
+    &:required:valid
+      border-color: $button-color
+      @extend .trans
+
+textarea
+  @extend .trans
+  outline: none
+  &:focus:required:invalid
+    border-color: $button-color
+    @extend .trans
+  &:required:valid
+    border-color: $button-color
+    @extend .trans
+
+// Уведомление об успешной отправке
+.success
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  text-transform: uppercase
+  font-weight: 600
+  z-index: 100
+  font-size: 20px
+  display: none
+  align-items: center
+  justify-content: center
+  & ~ *
+    transition: all .5s ease
+  &.active
+    & ~ *
+      opacity: .5
+      filter: blur(10px)
+// end
+
+// Стартовые стили
+.hidden
+  display: none
+
+.trans
+  transition: all .4s ease
+
+a
+  @extend .trans
+  outline: none
+  text-decoration: none
+  display: inline-block
+  &:hover, &:focus, &:active
+    text-decoration: none
+    outline: none
+
+ul
+  list-style-type: none
+
+h1, h2, h3, h4
+  font-family: $caption-font
+
+.button
+  @extend .trans
+  background-color: $button-color
+  padding: 9px 20px
+  border-radius: 35px
+  border: 2px solid $button-color
+  color: #fff
+  font-weight: bold
+  font-size: 14px
+  text-decoration: none
+  height: 40px
+  &:hover
+    background-color: #fff
+    color: $button-color
+
+h2
+  font-size: 24px
+  text-transform: uppercase
+  padding-top: 45px !important
+  padding-bottom: 45px !important
+
+h1
+  font-size: 30px
+  color: #fff
+  font-weight: normal
+
+//end
+
+.hamburger
+  display: none
+
+.header
+  overflow: hidden
+  @extend .trans
+  .header__logo
+    padding-top: 22px
+    display: flex
+    flex-direction: row
+    @extend .trans
+    p
+      padding-left: 15px
+      font-weight: 500
+      font-size: 12px
+      padding-top: 7px
+      @extend .trans
+    a
+      @extend .trans
+      img
+        width: 135px
+        height: 40px
+        @extend .trans
+  .header__menu
+    @extend .trans
+    .nav
+      @extend .trans
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      @extend .trans
+      li
+        @extend .trans
+        a
+          text-decoration: none
+          text-transform: uppercase
+          color:#838383
+          font-weight: 500
+          font-size: 12px
+          padding: 37px 5px 0px 5px
+          border-top: 3px solid transparent
+          @extend .trans
+          &:hover
+            color: #000
+            border-top: 3px solid $button-color
+        .active
+          font-weight: 800
+          color: #000
+          border-top: 3px solid $button-color
+          @extend .trans
+  .header_right-info
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
+    padding-bottom: 32px
+    @extend .trans
+    &:after
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 55vw
+      height: 100%
+      content: ""
+      z-index: -1
+      background-color: #F0F0F0
+      @extend .trans
+    &:before
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 180px
+      height: 100%
+      content: ""
+      z-index: -1
+      background-color: #F0F0F0
+      @extend .trans
+    .tel-icon
+      padding-top: 35px
+      @extend .trans
+      img
+        @extend .trans
+        height: 27px
+        width: 28px
+        &:hover
+          opacity: 0.6
+    .telephone
+      padding-top: 30px
+      padding-left: 9px
+      @extend .trans
+      a
+        color: #000
+        font-weight: 500
+        font-size: 14px
+        &:hover
+          color: $button-color
+    &__mobile
+      display: none    
+
+.section-1
+  overflow: hidden
+  background-image: url(../img/section-1-bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-color: rgba($accent, 1)
+  padding-bottom: 185px
+  .h1
+    padding-top: 140px
+    padding-bottom: 15px
+    line-height: 1.5
+  p
+    color: #fff
+    font-size: 16px
+    font-family: roboto-example
+    span
+      font-weight: bold
+  a
+    margin-top: 30px
+
+.section-2
+  background-color: #F7F6F6
+  h2
+    text-align: center
+    padding-bottom: 45px
+  .section-2__product-inner
+    background-color: #fff
+    padding: 40px 15px 30px 15px
+    text-align: center
+    margin-bottom: 40px
+    max-width: 300px
+    @extend .trans
+    &:hover
+      box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.28)
+      .product-logo
+        svg
+          .st0, .st1, .st3
+            fill: $button-color !important
+    .product-logo
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #F0F0F0
+      width: 112px
+      height: 112px
+      border-radius: 50%
+      margin: 0 auto
+      svg
+        width: 65px
+        margin-top: 10px 
+        height: auto
+        .st0, .st1, .st3
+          @extend .trans
+      .svg
+        width: 75px
+        margin-top: 20px
+    .caption-text
+      font-size: 16px
+      font-weight: 800
+      padding-top: 30px
+      padding-bottom: 22px    
+    .text__product
+      font-size: 12px
+      color: #838383    
+      padding-bottom: 30px
+    a
+      border-bottom: 1px solid #000
+      color: #000
+      font-weight: 800
+      font-size: 14px
+      &:hover
+        border-bottom: 1px solid $button-color
+        color: $button-color
+      
+.section-3
+  padding-top: 80px
+  margin-bottom: 50px
+  .section-3__content
+    border: 5px solid #E6E6E6
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 22px
+    padding-left: 22px
+    padding-right: 30px   
+    .section-3__content__left-wrap
+      img
+        margin-top: -30px
+        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.28)
+        @extend .trans
+        &:hover
+          transform: scale(1.03)
+    .section-3__content__right-wrap
+      padding-left: 30px
+      h2
+        span
+          color: $accent
+      p
+        font-size: 14px
+        i
+          font-style: normal
+          display: block
+          padding-top: 20px
+        strong
+          font-weight: bold
+          font-size: 16px
+          color: $accent
+          display: block
+          
+.section-4
+  background-image: url(../img/section-4-bg.png)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  .section-4__content
+    background-color: rgba($accent, 0.85)
+    padding-bottom: 55px
+    h2
+      color: #fff
+      text-align: center
+      padding-top: 45px
+    .section-4__advantage-inner
+      display: flex
+      flex-direction: row
+      .icon-inner
+        min-width: 60px
+        height: 60px
+        background-color: #fff
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+          width: 40px
+          height: 40px
+      .section-4__advantage-inner__text-inner
+        padding-left: 15px
+        h3
+          color: #fff
+          font-size: 18px
+          font-weight: bold
+          font-family: roboto-example
+          color: #fff
+          text-transform: none
+          padding-right: 55px
+          position: relative
+          &:after
+            content: ""
+            width: 35px
+            height: 2px
+            position: absolute
+            bottom: -25px
+            left: 0
+            background-color: #fff
+        p
+          color: #fff
+          font-size: 12px
+          padding-top: 20px
+
+.section-5
+  padding-bottom: 45px
+  h2
+    text-align: center
+  .owl-carousel
+    position: relative
+    .item
+      display: flex
+      flex-direction: row
+      border: 5px solid #E6E6E6
+      padding: 25px 35px 25px 25px
+      .icon-client
+        img
+          width: 57px
+          height: 57px
+      .reviews 
+        padding-left: 25px
+        .name-client
+          font-size: 16px
+          font-weight: bold
+          span
+            font-weight: 500
+            font-style: italic
+            font-size: 12px
+            color: $accent
+        .client-review
+          font-size: 12px
+          font-weight: 500
+        
+.owl-carousel .owl-nav
+  display: block
+  @extend .trans
+  &:hover
+    opacity: 0.7
+  .owl-prev
+    position: absolute
+    top: 120px
+    left: -40px
+  .owl-next
+    position: absolute
+    top: 120px
+    right: -40px
+
+.owl-carousel .owl-dots
+  text-align: center
+  .owl-dot
+    display: inline-block
+    background-color: $accent
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    opacity: 0.7
+    text-align: center
+    margin-top: 30px
+    margin-left: 15px
+    @extend .trans
+    &:hover
+      opacity: 0.9
+  .owl-dot.active
+    opacity: 1
+    &:hover
+      opacity: 0.9
+
+.section-6
+  background-image: url(../img/section-6-bg.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  background: transparent
+  padding-top: 15px
+  padding-bottom: 15px
+  h2
+    color: #fff
+  p
+    color: #fff
+    font-weight: 500
+    font-size: 11px
+    padding-top: 45px
+  .sec-6-but
+    padding-left: 35px
+    padding-right: 35px
+    margin-top: 45px
+    margin-left: 20px
+  .section-6__tel
+    display: flex
+    flex-direction: row
+    justify-content: center
+    padding-top: 45px
+    .section-6__tel-number
+      position: relative
+      a
+        color: #fff
+        font-size: 14px
+        font-weight: 500
+        position: absolute
+        top: 20px
+      p
+        padding-top: 0px
+    .section-6__icon-tel
+      img 
+        width: 25px
+        height: 25px
+        margin-right: 5px
+        margin-top: 7px
+        left: -35px
+
+
+.footer
+  overflow: hidden
+  background-color: #E6E6E6
+  padding-bottom: 45px
+  .footer__logo
+    padding-top: 37px
+    display: flex
+    flex-direction: column
+    .footer__logo__icon
+      display: flex
+      flex-direction: row
+      a
+        img
+          width: 135px
+          height: 40px
+      span
+        padding-top: 7px
+        padding-left: 25px
+        color: $accent
+        font-weight: 500
+        text-transform: uppercase
+        text-decoration: none
+    .footer__logo__text        
+      p
+        padding-top: 35px
+  .footer__text-info
+    padding-top:  42px
+    font-size: 13px
+    padding-left: 15px
+    a
+      color: $button-color
+      font-size: 14px
+      font-weight: bold
+      text-decoration: none
+      border-bottom: 1px solid #F99C5F
+      &:hover
+        color: $accent
+        border-bottom: 1px solid $accent
+  .footer__contacts
+    padding-top: 42px
+    .footer__telephone
+      color: #000
+      font-size: 14px
+      font-weight: 500
+      padding-bottom: 5px
+    .footer__mail
+      color: #000
+      font-size: 13px
+      border-bottom: 1px solid #929292
+      margin-bottom: 11px
+  .upstairs
+    border: 3px solid #CDCDCD
+    text-align: center
+    margin-left: 65px
+    margin-top: 55px
+    padding: 12px
+    &:hover
+      i
+        color: $accent
+    a
+      color: #000
+      font-weight: bold
+      font-size: 14px
+      i
+        font-size: 16px
+        color: $button-color
+        display: inline
+        padding-left: 5px
+        @extend .trans
+        
+
+.headhesive
+  position: fixed
+  width: 100%
+  background-color: #fff
+  z-index: 10
+  transform: translateY(0%)
+  @extend .trans
+
+.headhesive--stick
+  transform: translateY(0)
+  @extend .trans
+  .header__logo
+    padding-top: 10px
+    @extend .trans
+    p
+      padding-top: 7px
+      @extend .trans
+      img
+        width: 115px
+        height: 20px
+        @extend .trans
+  .header__menu
+    @extend .trans
+    .nav
+      @extend .trans
+      li
+        @extend .trans
+        a
+          padding: 20px 3px 0px 3px
+          @extend .trans
+  .header_right-info
+    padding-bottom: 20px
+    @extend .trans
+    .tel-icon
+      padding-top: 15px
+      @extend .trans
+    .telephone
+      padding-top: 10px
+      @extend .trans
+
+     
+
+.parallax-window
+  background: rgba($accent, 0)
+
+//news.html
+
+.section-caption
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  padding-top: 72px
+  padding-bottom: 67px
+  text-align: center
+
+
+.section-news
+  padding-top: 45px
+  padding-bottom: 40px
+  .news-block
+    padding-top: 20px
+    padding-bottom: 35px
+    padding-left: 20px
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11)
+    position: relative
+    margin-bottom: 25px
+    .caption-news
+      font-size: 14px
+      font-weight: 800
+      text-align-last: auto
+      padding-right: 65px
+    .news-tags
+      color: $accent
+      border: 1px solid $accent
+      padding: 7px 10px
+      font-weight: 500
+      text-decoration: none
+      margin-bottom: 25px
+      max-height: 30px
+    .news-text
+      color: #838383
+      padding-right: 30px
+      margin-bottom: 25px
+    .more-info
+      color: $accent
+      font-weight: bold
+      font-size: 14px
+      border-bottom:  1px solid $accent
+      padding-top: 10px
+      &:hover
+        color: $button-color
+        border-bottom:  1px solid $button-color
+    span
+      background-color: #F0F0F0
+      padding: 7px
+      color: #838383
+      position: absolute
+      right: 20px
+      bottom: 30px
+      max-height: 30px
+
+.pagination
+  text-align: center
+  padding-bottom: 40px
+  ul
+    text-align: center
+    li
+      display: inline-block
+      margin: 0 1px
+      vertical-align: middle 
+      line-height: 12px 
+      padding: 2px 6px
+      a
+        color: #838383
+        background-color: #fff
+        padding: 9px 12px
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.11)
+        font-weight: 500
+        font-size: 16px
+        &:hover
+          color: $button-color
+      .prev, .next
+        box-shadow: none
+        background-color: none
+        font-size: 12px
+      .points
+        background: none
+        box-shadow: none
+    .active
+      a
+        color: $button-color
+
+
+//contacts.html
+
+.section-contacts
+  padding-top: 45px
+  padding-bottom: 45px
+  overflow: hidden
+  h3
+    font-size: 18px
+    padding-bottom: 25px
+  .section-contancts__left-inner, .section-contancts__right-inner
+    padding-left: 25px
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11)
+    padding-right: 20px
+    padding-top: 35px
+    padding-bottom: 35px
+    height: 100%
+    .text
+      font-style: italyc
+      font-weight: 500
+      font-size: 14px
+      color: $accent
+      display: block
+      padding-bottom: 30px
+    p
+      font-size: 14px
+      padding-bottom: 60px
+      .img
+        color: $accent
+        font-size: 14px
+        padding-right: 8px
+      span
+        font-weight: bold
+    .section-contancts__left-inner__contact
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .section-contancts__left-inner__contact__telephone
+        display: flex
+        flex-direction: row
+        .section-contancts__left-inner__contact__telephone__icon
+          img
+            width: 18px
+            height: 18px
+            margin-top: 5px
+            margin-right: 7px
+        .section-contancts__left-inner__contact__telephone__number
+          a
+            color: #000
+            font-size: 14px
+            font-weight: 500
+            &:hover
+              color: $button-color
+      .section-contancts__left-inner__contact__mail
+        a
+          color: $button-color
+          font-size: 14px
+          font-weight: 500
+          border-bottom: 1px solid  $button-color
+          padding-bottom: 4px
+          &:hover
+              color: #000
+              border-bottom: 1px solid  #000
+  .section-contancts__right-inner
+    padding-bottom: 22px
+    padding-right: 35px
+    form
+      text-align: center
+      input
+        width: 100%
+        padding: 9px 6px
+        margin-bottom: 20px
+        @extend .trans
+      textarea
+        resize: none
+        width: 100%
+        height: 88%
+        padding: 9px 6px
+        @extend .trans
+        &:focus
+          border: 1px solid $button-color
+      .button
+        padding: 9px 25px
+        font-weight: bold
+        font-size: 14px
+        outline: none
+
+//products.html
+.section-products
+  padding-top: 45px
+  padding-bottom: 50px
+  .products-caption
+    border: 5px solid #E6E6E6
+    text-align: center
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 20px
+    padding-right: 20px
+    p
+      color: $accent
+      font-weight: bold
+      font-size: 14px
+  .name-products
+    margin-top: 45px
+    margin-bottom: 30px
+    p
+      font-size: 14px
+      span
+        color: $accent
+        font-weight: 800
+        font-size: 16px
+  .properties
+    margin-bottom: 25px
+    .table-caption
+      background-color: #E6E6E6
+      font-weight: 800
+      font-size: 16px
+      color: #000
+      caption-side: top
+      padding-left: 20px
+    td
+      font-size: 14px
+      padding-left: 20px
+      padding-top: 15px
+      padding-bottom: 17px
+      border: 1px solid #E6E6E6
+      color: #000
+      i
+        color: $button-color
+        font-size: 12px
+      span
+        padding-left: 15px
+  .specifications
+    .table-caption
+      background-color: #E6E6E6
+      font-weight: 800
+      font-size: 16px
+      color: #000
+      caption-side: top
+      padding-left: 20px
+    .left-td
+      font-size: 14px
+      padding-left: 20px
+      padding-top: 15px
+      padding-bottom: 17px
+      border: 1px solid #E6E6E6
+      color: #000
+      i
+        color: $button-color
+        font-size: 12px
+      span
+        padding-left: 15px
+    .right-td
+      font-size: 14px
+      padding-left: 20px
+      padding-top: 15px
+      padding-bottom: 17px
+      border: 1px solid #E6E6E6
+      color: #000
+      font-weight: 800
+      text-align: center
+  .product-name
+    color: $accent
+    font-weight: 800
+    font-size: 16px
+    padding-top: 40px
+    padding-bottom: 25px
+  ul
+    padding-bottom: 33px
+    .caption-ul
+      font-weight: bold
+      font-size: 14px
+      padding-bottom: 25px
+      display: block
+    li
+      padding-bottom: 25px
+      span
+        color: #000
+        font-size: 14px
+        padding-left: 15px
+      i
+        color: $button-color
+        font-size: 12px
+    .feauters
+      font-size: 14px
+
+
+//form
+
+form
+  .content-form
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    min-width: 770px
+    .form-img
+      background-image: url(../img/call_back_for_bg.jpg)
+      width: 50%
+      min-height: 500px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+    .form-inner
+      padding-top: 20px
+      text-align: left
+      padding-left: 30px
+      padding-right: 25px
+      width: 50%
+      h2
+        font-size: 18px
+        margin-bottom: 45px
+      .input-inner
+        input
+          width: 100%
+          padding: 
+          margin-bottom: 20px
+          padding-left: 15px
+          padding-top: 11px
+          padding-bottom: 11px
+          @extend .trans
+        textarea
+          width: 100%
+          resize: none
+          padding-left: 15px
+          padding-top: 11px
+          height: 60px
+          margin-bottom: 20px
+          @extend .trans
+          &:focus
+            border: 1px solid $button-color
+      .button-inner
+        text-align: center
+        .button
+          font-size: 14px
+          padding: 9px 23px
+          outline: none
+          font-weight: bold
+          margin-bottom: 20px
+
+      
+
+.fancybox-slide>*
+  padding: 0
+
+
+
+
+
+
+@import "media" // Always at the end

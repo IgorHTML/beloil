@@ -1,0 +1,675 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
++media-breakpoint-down(xl)
+  
+    
+
++media-breakpoint-down(lg)
+  
+  .header .header_right-info:before
+    width: 150px
+
+
+
+  .header
+    .header_right-info
+      .telephone
+        padding-left: 3px
+        a
+          font-size: 11px
+
+  .header .header__menu .nav li a 
+    font-size: 11px
+
+  .header .header_right-info:after
+    width: 24vw
+
+
+
+  .header .header__logo p
+    font-size: 10px
+    padding-left: 13px
+    padding-top: 10px
+
+  .section-1
+    padding-bottom: 130px 
+    .h1
+      padding-top: 110px
+      font-size: 28px
+  
+  .section-6 .sec-6-but 
+    margin-left: 25px
+
+  .section-6 p
+    font-size: 10px
+    padding-top: 50px
+
+  .section-6 .section-6__tel .section-6__tel-number a
+    font-size: 13px
+
+  .owl-carousel .owl-nav .owl-prev
+    left: -20px
+
+  .owl-carousel .owl-nav .owl-next
+    right: -20px
+
+  .footer .footer__text-info
+    font-size: 11px
+
+  .footer .footer__logo .footer__logo__text p
+    padding-top: 60px
+
+  .footer .upstairs
+    margin-left: 30px
+    margin-top: 50px
+    padding: 11px
+    a
+      font-size: 13px
+      i
+        font-size: 13px
+
+  .footer .footer__contacts .footer__mail
+    font-size: 12px
+
+  .footer .footer__contacts .footer__telephone
+    font-size: 13px
+
+  .footer .footer__logo .footer__logo__icon span
+    padding-left: 20px
+
+  .headhesive--stick .header_right-info
+    padding-bottom: 26px
+
+  .headhesive--stick .header_right-info .tel-icon
+    padding-top: 18px
+
+  .headhesive--stick .header_right-info .telephone
+    padding-top: 16px
+
+  .section-3 .section-3__content .section-3__content__left-wrap img
+    margin-top: -20px
+
++media-breakpoint-down(md)
+  .headhesive
+    display: none
+
+
+
+  h2
+    font-size: 23px
+
+  .hamburger
+    display: block
+    padding-top: 30px
+    &:hover
+      opacity: 1
+
+  .header .header__logo
+    p
+      font-size: 10px
+      padding-left: 15px
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    background-color: $button-color
+    width: 28px
+
+  .header
+    overflow: visible
+    position: relative
+    .header__menu
+      .nav-inner
+        display: none
+        width: 100%
+        position: absolute
+        left: 0
+        text-align: center
+        z-index: 4
+        background-color: #fff
+        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5)
+        .nav
+          flex-direction: column
+
+  .header .header_right-info
+    display: none
+    &__mobile
+      display: flex
+      background-color: #F0F0F0
+      padding-bottom: 20px
+      flex-direction: row
+      justify-content: center
+
+  .header .header__menu .nav li a
+    padding-top: 20px
+    font-size: 14px
+
+  .header .header__menu .nav li .active
+    border-top: none
+    border-bottom: 3px solid $button-color
+    padding-bottom: 3px
+    font-size: 14px
+
+  .header .header_right-info:after
+    display: none
+
+  .header .header_right-info .tel-icon
+    padding-top: 27px
+    img
+      width: 30px
+      height: 30px
+
+  .header .header_right-info .telephone
+    padding-top: 20px
+    padding-left: 7px
+    a
+      font-size: 14px
+
+  .section-1
+    padding-bottom: 80px 
+    .h1
+      padding-top: 70px
+      font-size: 24px
+
+  .section-2
+    padding-bottom: 30px
+
+  .section-2 .section-2__product-inner
+    padding: 30px 10px 20px 10px
+    margin-bottom: 30px
+
+  .section-3
+    padding-top: 60px
+    margin-bottom: 40px
+    .section-3__content
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      .section-3__content__left-wrap
+        img
+          margin-top: -25px
+          margin-bottom: 0px
+          max-height: 300px
+          width: 100%
+
+  .section-4 .section-4__content 
+    .section-4__advantage-inner
+      padding-top: 35px
+      .icon-inner
+        min-width: 45px
+        height: 45px
+        img
+          width: 22px
+          height: 29px
+      
+  .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner
+    padding-left: 10px
+    h3
+      font-size: 16px
+      &:after
+        bottom: -20px
+    p
+      padding-top: 15px
+
+  .section-4 
+    .section-4__content
+      padding-bottom: 35px
+      h2
+        padding-top: 35px
+  
+  .section-6 h2
+    font-size: 22px
+
+  .section-6 .sec-6-but
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 10px
+
+  .section-6 p
+    font-size: 11px
+
+  .section-6 .section-6__tel .section-6__tel-number a
+    font-size: 14px
+    left: 0
+    right: 0
+
+  .footer .footer__logo .footer__logo__icon
+    flex-direction: column
+
+  .footer .footer__logo .footer__logo__icon span
+    padding-left: 0px
+    font-size: 11px
+
+  .footer .footer__logo .footer__logo__text p
+    padding-top: 20px
+    font-size: 10px
+
+  .footer .footer__text-info a
+    font-size: 13px
+
+  .footer .footer__contacts .footer__mail
+    font-size: 10px
+
+  .footer .footer__contacts .footer__telephone
+    font-size: 10px
+
+  .footer .upstairs
+    margin-left: 15px
+    padding: 5px
+    a
+      font-size: 12px
+
+  .footer
+    padding-bottom: 15px
+
+  .headhesive--stick .header__logo p
+    font-size: 8px
+    padding-top: 4px
+
+  .headhesive--stick .header_right-info .telephone
+    padding-top: 10px
+
+
+  .headhesive--stick .header_right-info
+    padding-bottom: 21px
+
+
+  .parallax-window
+  background: rgba($accent, 1)
+
+  .section-contacts .section-contancts__left-inner, .section-contacts .section-contancts__right-inner
+    margin-top: 30px
+
+  .section-contacts
+    padding-bottom: 70px
+
+  .section-contacts .section-contancts__right-inner
+    padding-bottom: 0px
+
+  .section-contacts .section-contancts__right-inner form .button
+    margin-top: 15px
+
+  .section-products .products-caption
+    padding: 13px
+    p
+
+  .section-products .name-products
+    margin-top: 30px
+    margin-bottom: 20px
+      font-size: 12px
+
+  .section-products .properties .table-caption
+    font-size: 14px
+
+  .section-products .properties td
+    fz12
+
+  .section-products .specifications .table-caption
+    font-size: 14px
+
+  .section-products .specifications .left-td
+    font-size: 12px
+
+  .section-products .specifications .right-td
+    font-size: 12px
+
+  .section-products .product-name
+    font-size: 14px
+
+  .section-products ul li span
+    font-size: 12px
+
+  .section-products .properties td
+    font-size: 12px
+
+  .section-products ul
+    padding-bottom: 0
+
+  .section-products .name-products p span
+    font-size: 14px
+
+  .section-products .name-products p
+    font-size: 13px
+
+  .section-products ul .feauters
+    font-size: 13px
+
+  form .content-form
+    min-width: 650px
+
+  .section-4 .section-4__content .section-4__advantage-inner
+    padding-top: 0
+
+  .section-6 .sec-6-but
+    margin-left: 10px
+
+  .header .header__logo
+    padding-top: 1em
+    p
+      padding-top: 10px
+
+  .hamburger
+    padding: 0 !important
+    padding-top: 1.8em !important
+    text-align: right
+    .hamburger-box
+      width: 31px
++media-breakpoint-down(sm)
+
+
+  h2
+    font-size: 22px
+
+  .hamburger
+    display: block
+    padding-top: 30px
+    &:hover
+      opacity: 1
+
+  .header .header__logo
+    padding-top: 1em
+    p
+      font-size: 10px
+      padding-top: 10px
+      padding-left: 15px
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    background-color: $button-color
+    width: 28px
+
+  .header
+    overflow: visible
+    position: relative
+    .header__menu
+      .nav-inner
+        display: none
+        width: 100%
+        position: absolute
+        left: 0
+        text-align: center
+        z-index: 4
+        background-color: #fff
+        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5)
+        .nav
+          flex-direction: column
+
+  .header .header_right-info
+    display: none
+    &__mobile
+      display: flex
+      background-color: #F0F0F0
+      padding-bottom: 20px
+      flex-direction: row
+      justify-content: center
+
+  .header .header__menu .nav li a
+    padding-top: 20px
+    font-size: 14px
+
+  .header .header__menu .nav li .active
+    border-top: none
+    border-bottom: 3px solid $button-color
+    padding-bottom: 3px
+    font-size: 14px
+
+  .header .header_right-info:after
+    display: none
+
+  .header .header_right-info .tel-icon
+    padding-top: 27px
+    img
+      width: 30px
+      height: 30px
+
+  .header .header_right-info .telephone
+    padding-top: 20px
+    padding-left: 7px
+    a
+      font-size: 14px 
+
+  .section-1
+    padding-bottom: 65px
+    text-align: center 
+    .h1
+      padding-top: 43px
+      font-size: 18px
+    p
+      font-size: 14px
+    a 
+      margin-top: 25px
+      padding: 9px 18px
+
+  .section-6 p
+    padding-top: 0
+
+  .section-6 .sec-6-but
+    margin-top: 15px
+
+  .section-6
+    padding-bottom: 30px
+
+  .section-2 .section-2__product-inner
+    padding: 40px 23px 25px 23px
+    
+  .section-3 .section-3__content .section-3__content__right-wrap 
+    padding-left: 0px
+    h2
+      font-size: 22px
+
+  .section-4 .section-4__content .section-4__advantage-inner
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+
+  .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner
+    padding-left: 0
+
+  .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner h3
+    padding-right: 0
+    padding-top: 20px
+    font-size: 18px
+
+  .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner h3:after
+    left: 44%
+
+  .section-4 .section-4__content .section-4__advantage-inner .icon-inner
+    min-width: 55px
+    height: 55px
+    img
+      width: 30px
+      height: 31px
+
+  .owl-carousel .owl-nav .owl-next
+    right: -25px
+
+  .owl-carousel .owl-nav .owl-prev
+    left: -25px
+
+  .section-6
+    text-align: center
+
+  .section-6 .sec-6-but
+    padding-left: 25px
+    padding-right: 25px
+
+  .section-6 .section-6__tel
+    display: flex
+    flex-direction: row
+    padding-top: 20px
+    justify-content: center
+
+  .footer
+    text-align: center
+  
+  .footer .footer__contacts
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .footer .footer__text-info
+    padding-left: 0px
+    padding-top: 20px
+
+  .footer .footer__logo
+    align-items: center
+    padding-top: 25px
+
+  .footer .footer__text-info a
+    padding-top: 15px
+    font-size: 14px
+
+  .footer .footer__contacts .footer__mail
+    font-size: 13px
+
+  .footer .footer__contacts .footer__telephone
+    font-size: 14px
+
+  .footer .footer__text-info
+    font-size: 13px
+
+  .footer__logo__text-mobile
+    font-size: 12px
+    padding-top: 25px
+
+
+  .footer .footer__logo .footer__logo__icon
+    flex-direction: row
+    justify-content: center
+    span
+      text-align: left
+      padding-left: 25px
+
+  .footer .upstairs
+    display: none
+
+  .footer .footer__logo .footer__logo__text p
+    display: none
+
+  
+
+  .headhesive
+    display: none
+
+  form .content-form
+    min-width: 550px
+
+  .text__product
+    height: auto !important 
+
+  .section-2 .section-2__product-inner
+    max-width: 100%
+
+  .hamburger
+    padding: 0 !important
+    padding-top: 1.85em !important
+    text-align: right
+    .hamburger-box
+      width: 31px
+
++media-breakpoint-down(xs)
+
+
+  .header__menu
+    text-align: right
+
+  .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner h3:after
+    left: 45%
+  .section-5 .owl-carousel .item .reviews .client-review
+    margin-left: -70px
+    margin-top: 15px
+  
+  .footer .footer__logo .footer__logo__icon span
+    padding-left: 10px
+    padding-top: 9px
+
+  .pagination
+    ul
+      li
+        padding: 2px 1px
+        a
+          padding: 4px 6px
+          font-size: 13px
+      .four, .five, .six
+        display: none
+
+  .section-contacts h3
+    font-size: 16px
+
+
+  .section-contacts .section-contancts__left-inner .text
+    font-size: 12px
+
+  .section-contacts .section-contancts__left-inner p
+    font-size: 12px
+    padding-bottom: 20px
+
+  .section-contacts .section-contancts__left-inner .section-contancts__left-inner__contact .section-contancts__left-inner__contact__telephone .section-contancts__left-inner__contact__telephone__number a
+    font-size: 12px
+
+  .section-contacts .section-contancts__left-inner .section-contancts__left-inner__contact .section-contancts__left-inner__contact__mail a
+    font-size: 12px
+    margin-top: 10px
+
+  .section-contacts .section-contancts__right-inner form .button
+    font-size: 12px
+
+  .section-contacts .section-contancts__left-inner .section-contancts__left-inner__contact
+    flex-direction: column
+    align-items: center
+
+  form .content-form
+    min-width: 350px
+
+  form .content-form .form-img
+    display: none
+
+  form .content-form .form-inner
+    width: 100%
+
+@media (max-width: 500px)
+
+ .section-4 .section-4__content .section-4__advantage-inner .section-4__advantage-inner__text-inner h3:after
+  left: 44%
+
+
+@media (max-width: 422px)
+
+  .header .header__logo
+    flex-direction: column
+    p
+      padding-left: 0 !important
+
+  .hamburger
+    padding-top: 3.2em !important
+
+  
+
+
+
+/*==========  Mobile First  ==========*/
+
++media-breakpoint-up(xs)
+  .container
+    width: 100%x
+
++media-breakpoint-up(sm)
+  .container
+    width: 560px 
+
++media-breakpoint-up(md)
+  .container
+    width: 720px 
+  
++media-breakpoint-up(lg)
+  .container
+    width: 960px 
+
+  .header
+    .header__menu
+      .nav-inner
+        display: block !important
++media-breakpoint-up(xl)
+  .container
+    width: 1170px 
